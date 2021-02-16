@@ -1,5 +1,5 @@
 $ cd /nesi/project/PROJECTID # replace PROJECTID with yours
-$ git clone git@github.com:WesHarrell/schism.git
+$ git clone https://github.com/WesHarrell/schism.git
 $ cd schism
 $ module purge
 $ module load PETSc
