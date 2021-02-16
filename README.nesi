@@ -1,0 +1,14 @@
+$ cd /nesi/project/PROJECTID # replace PROJECTID with yours
+$ git clone git@github.com:WesHarrell/schism.git
+$ cd schism
+$ module purge
+$ module load PETSc
+$ module load netCDF-Fortran/4.5.2-gimpi-2020a
+$ module load CMake
+## Edit cmake/SCHISM.local.build and enable/disable the modules
+## algorithms and models necessary for your work
+$ mkdir build && cd build
+$ cmake -C ../cmake/SCHISM.local.build -C ../cmake/SCHISM.local.mahuika ../src/
+$ make
+## The binaries will be located in the bin subdirectory, you can add this to your PATH:
+$ export PATH=/nesi/project/PROJECTID/schism/bin:$PATH  #replace PROJECTID with yours
